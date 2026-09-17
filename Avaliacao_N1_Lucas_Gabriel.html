@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação N1 - Lucas Gabriel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 16pt;
+            text-align: center;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 24px;
+        }
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .header-info {
+            margin-bottom: 30px;
+        }
+        .header-info p {
+            margin: 4px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-info">
+        <p>UNICESUSC – Centro Universitário</p>
+        <p>Bacharelado em Administração / ADM31N</p>
+        <p>Disciplina: Gestão de Operações e Processos</p>
+        <p>Prof.: Adm. Andre Luiz Carvalho</p>
+        <p>Aluno(a): Lucas Gabriel</p>
+        <p>Data: 16/09/2026</p>
+    </div>
+
+    <hr>
+
+    <h1>AVALIAÇÃO N1: GESTÃO DE OPERAÇÕES E PROCESSOS</h1>
+
+    <h2>QUESTÃO 1 (5,0 pts)</h2>
+
+    <h3>a) Demanda total de fabricação para 2026 via Regressão Linear Simples</h3>
+    <p>Abaixo é apresentada a tabela estruturada para o modelo matemático de Regressão Linear Simples, relacionando a variável independente (X = Ano) e a variável dependente (Y = Demanda de Parafusos Autoatarrachantes).</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ano</th>
+                <th>Período (X)</th>
+                <th>Demanda (Y)</th>
+                <th>X²</th>
+                <th>XY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2021</td>
+                <td>1</td>
+                <td>46.048</td>
+                <td>1</td>
+                <td>46.048</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>2</td>
+                <td>49.365</td>
+                <td>4</td>
+                <td>98.730</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>3</td>
+                <td>56.919</td>
+                <td>9</td>
+                <td>170.757</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>4</td>
+                <td>55.960</td>
+                <td>16</td>
+                <td>223.840</td>
+            </tr>
+            <tr>
+                <td>2025</td>
+                <td>5</td>
+                <td>60.280</td>
+                <td>25</td>
+                <td>301.400</td>
+            </tr>
+            <tr>
+                <td><strong>SOMA</strong></td>
+                <td><strong>ΣX = 15</strong></td>
+                <td><strong>ΣY = 268.572</strong></td>
+                <td><strong>ΣX² = 55</strong></td>
+                <td><strong>ΣXY = 840.775</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Memória de Cálculo e Fórmulas Teóricas:</strong><br>
+    Para projetarmos a demanda, utilizamos a equação da reta: <strong>Y = aX + b</strong>, onde n = 5 períodos.</p>
+
+    <p><strong>1. Cálculo do Coeficiente Angular (a):</strong><br>
+    <em>Fórmula:</em> a = [n(ΣXY) - (ΣX)(ΣY)] / [n(ΣX²) - (ΣX)²]<br>
+    <em>Substituição Numérica:</em><br>
+    a = [5 * (840.775) - (15) * (268.572)] / [5 * (55) - (15)²]<br>
+    a = [4.203.875 - 4.028.580] / [275 - 225]<br>
+    a = 175.295 / 50<br>
+    <strong>a = 3.505,90</strong></p>
+
+    <p><strong>2. Cálculo do Intercepto (b):</strong><br>
+    <em>Fórmula:</em> b = [ΣY - a(ΣX)] / n<br>
+    <em>Substituição Numérica:</em><br>
+    b = [268.572 - 3.505,90 * (15)] / 5<br>
+    b = [268.572 - 52.588,50] / 5<br>
+    b = 215.983,50 / 5<br>
+    <strong>b = 43.196,70</strong></p>
+
+    <p><strong>3. Prova Real das Equações Normais:</strong><br>
+    A igualdade ΣY = n*b + a*ΣX deve ser verdadeira.<br>
+    268.572 = 5 * (43.196,70) + 3.505,90 * (15)<br>
+    268.572 = 215.983,50 + 52.588,50<br>
+    <strong>268.572 = 268.572</strong> (Cálculo Validado).</p>
+
+    <p><strong>4. Projeção para o ano de 2026 (X = 6):</strong><br>
+    Y₆ = aX + b<br>
+    Y₆ = 3.505,90 * (6) + 43.196,70<br>
+    Y₆ = 21.035,40 + 43.196,70<br>
+    <strong>Y₆ = 64.232,10 unidades</strong> (Arredondado para <strong>64.232 unidades</strong> totais no ano).</p>
+
+    <hr>
+
+    <h3>b) Demanda por bimestre aplicando médias ponderadas/sazonalidade</h3>
+    <p>A demanda média bimestral esperada é de 10.705,35 unidades (64.232,10 / 6). Aplicando os fatores sazonais históricos, obtemos a distribuição abaixo:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Bimestre</th>
+                <th>Fator Sazonal</th>
+                <th>Participação %</th>
+                <th>Demanda Contínua Decimal</th>
+                <th>Programação PCP Inteira (un.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>0,9337</td>
+                <td>15,56%</td>
+                <td>9.995,69</td>
+                <td><strong>9.996</strong></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>0,9844</td>
+                <td>16,41%</td>
+                <td>10.538,45</td>
+                <td><strong>10.539</strong></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1,1022</td>
+                <td>18,37%</td>
+                <td>11.799,07</td>
+                <td><strong>11.800</strong></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>0,9077</td>
+                <td>15,13%</td>
+                <td>9.717,38</td>
+                <td><strong>9.718</strong></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>0,9528</td>
+                <td>15,88%</td>
+                <td>10.200,31</td>
+                <td><strong>10.201</strong></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>1,1192</td>
+                <td>18,65%</td>
+                <td>11.981,20</td>
+                <td><strong>11.978</strong> <em>(fechamento)</em></td>
+            </tr>
+            <tr>
+                <td><strong>TOTAL</strong></td>
+                <td><strong>-</strong></td>
+                <td><strong>100,00%</strong></td>
+                <td><strong>64.232,10</strong></td>
+                <td><strong>64.232</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><em>(Nota: O valor do Bimestre 6 sofreu um ajuste residual mínimo matemático para garantir o fechamento exato do saldo de 64.232 unidades de forma inteira, mantendo a coerência do fluxo fabril).</em></p>
+
+    <hr>
+
+    <h3>c) Avaliação crítica dos resultados</h3>
+    <p>A <strong>Importância Estratégica da Previsão de Demanda</strong>, conforme elucidado por Ching (2019), é o pilar que sustenta o nível de serviço ao cliente e a otimização dos recursos organizacionais. A projeção de 64.232 unidades não é apenas um número, mas a base para o dimensionamento da capacidade instalada, garantindo o fluxo de caixa saudável ao evitar compras antecipadas desnecessárias e mitigando os elevados custos de estocagem por obsolescência ou capital imobilizado.</p>
+    <p>Do ponto de vista dos <strong>Métodos Estatísticos</strong>, a combinação adotada (Regressão Linear atrelada à Decomposição Sazonal) demonstrou-se robusta. A regressão capturou a tendência global de crescimento da empresa (coeficiente <em>a</em> positivo de 3.505,90). Contudo, a regressão isolada geraria uma média contínua de 10.705 unidades/bimestre, falhando na realidade prática. A aplicação dos fatores sazonais corrige este desvio, revelando picos (Bimestres 3 e 6) e vales (Bimestres 1 e 4), aproximando a teoria da realidade cíclica do mercado.</p>
+    <p>No tocante às <strong>Decisões Práticas do PCP</strong>, ancorando-se em Chiavenato (2022), a identificação destes picos e vales permite a adoção de uma <strong>Estratégia Mista de Capacidade (Hybrid Strategy)</strong>. Nos vales (ex: Bimestre 4, com 9.718 un.), o PCP pode programar férias coletivas parciais, treinamentos ou manutenção preventiva do maquinário sem impactar o atendimento. Além disso, o Planejamento de Suprimentos via MRP ganha previsibilidade: considerando os <em>lead times</em> de fornecimento do aço, o setor de compras pode parametrizar lotes maiores antes dos Bimestres 3 e 6, garantindo que a fábrica não sofra rupturas de insumos e que a programação de chão de fábrica ocorra de maneira fluida.</p>
+
+    <hr>
+
+    <h2>QUESTÃO 2 (2,0 pts)</h2>
+
+    <p><strong>a) Processos</strong><br>
+    Segundo o <em>CBOK</em> da ABPMP (2013), processos consistem em um conjunto definido e estruturado de atividades e comportamentos executados por humanos e/ou máquinas para alcançar um ou mais objetivos estratégicos ou gerar valor ao cliente. É a transformação sequencial de entradas (<em>inputs</em>) em saídas (<em>outputs</em>).</p>
+
+    <p><strong>b) Procedimentos (Procedimento Operacional Padrão - POP)</strong><br>
+    Apoiado em Chiavenato (2022) e Silva e Ramos (2016), o procedimento é a documentação formal e tática que prescreve <em>como</em> o processo (ou uma de suas etapas) deve ser executado. O POP estabelece o passo a passo rotineiro, garantindo repetibilidade, padronização, segurança e minimização de falhas operacionais, independentemente do operador que realiza a tarefa.</p>
+
+    <p><strong>c) Planejamento e Controle da Produção (PCP)</strong><br>
+    O PCP é o sistema nervoso da manufatura. Conforme Chiavenato (2022), trata-se da função administrativa responsável por gerenciar a conversão de matérias-primas em produtos acabados. Ele planeja (o que, quanto e quando produzir), roteiriza, programa (sequenciamento), emite ordens e controla o desempenho para garantir a máxima eficiência dos recursos e o atendimento dos prazos.</p>
+
+    <p><strong>d) Fluxograma</strong><br>
+    Conceitua-se, a partir de Silva e Ramos (2016), como a representação gráfica e simbólica da sequência lógica de atividades de um processo ou procedimento. Por meio de formas geométricas padronizadas, o fluxograma ilustra o caminho do fluxo de trabalho, os pontos de decisão e as fronteiras da operação, facilitando o mapeamento, o entendimento rápido e a identificação de gargalos.</p>
+
+    <hr>
+
+    <h2>QUESTÃO 3 (1,0 pt)</h2>
+    <p>Com base na obra <em>"Introdução ao Planejamento e Controle de Produção: conceitos e ferramentas"</em> (Amorim, Rocha, Maretto, 2024), as Funções e Responsabilidades do PCP estruturam-se hierárquica e cronologicamente da seguinte forma:</p>
+    <ol>
+        <li><strong>Previsão de Demanda:</strong> Função de longo/médio prazo focada em estimar as vendas futuras (quantitativamente) a partir de dados históricos e mercadológicos, municiando a empresa com dados para planejamento orçamentário e de capacidade.</li>
+        <li><strong>Plano-Mestre de Produção (PMP / MPS - <em>Master Production Schedule</em>):</strong> Converte a previsão de demanda agregada em um cronograma detalhado por produto final e prazo. Define exatamente <em>o que</em> fabricar e <em>quando</em> disponibilizar o produto acabado.</li>
+        <li><strong>Administração de Materiais / MRP (<em>Material Requirements Planning</em>):</strong> A partir da explosão da estrutura do produto (Bill of Materials) ditada pelo PMP, o MRP calcula as necessidades exatas (líquidas e brutas) de componentes e matérias-primas, gerenciando estoques e definindo o momento correto de comprar ou fabricar.</li>
+        <li><strong>Programação e Sequenciamento:</strong> Tradução do planejamento de materiais para o nível de chão de fábrica. Consiste na alocação da carga máquina e organização da fila de operações (<em>scheduling</em>), determinando em qual ordem as tarefas serão executadas nos centros de trabalho para otimizar os <em>setups</em> (tempos de preparação).</li>
+        <li><strong>Emissão e Liberação de Ordens:</strong> Função de despacho (<em>dispatching</em>). Representa o "start" operacional, convertendo o que estava planejado em ordens formais físicas ou sistêmicas (Ordens de Produção e de Compra), autorizando os operadores a iniciarem o trabalho.</li>
+        <li><strong>Acompanhamento e Controle:</strong> Função de monitoramento retroativo. Consiste em comparar o que foi executado (<em>realizado</em>) no chão de fábrica contra o que estava programado, efetuando correções de rota, tratativas de atrasos, quebras de máquina e realimentando os indicadores de desempenho produtivos.</li>
+    </ol>
+
+    <hr>
+
+    <h2>QUESTÃO 4 (2,0 pts)</h2>
+    <p>Para a modelagem do preparo de um "Bolo Caseiro Tradicional", adota-se a notação internacional BPMN (<em>Business Process Model and Notation</em>), conforme diretrizes do "Guia Rápido" (Silva e Ramos, 2016, pg. 06).</p>
+    
+    <p><strong>Descrição dos Elementos BPMN Utilizados:</strong></p>
+    <ul>
+        <li><strong>Evento de Início (Círculo de linha fina):</strong> Determina o gatilho inicial ("Desejo de preparar o bolo").</li>
+        <li><strong>Evento de Fim (Círculo de linha espessa):</strong> Marca o término e a entrega do valor final ("Bolo pronto para consumo").</li>
+        <li><strong>Atividades (Retângulos com bordas arredondadas):</strong> Representam os trabalhos executados ativamente.</li>
+        <li><strong>Gateway (Losango):</strong> Representa os pontos de decisão e divergência condicional do fluxo (Exclusivo - XOR).</li>
+        <li><strong>Fluxo de Sequência (Setas contínuas):</strong> Demonstram a ordem cronológica e lógica do processo, bem como laços de repetição (<em>loops</em>) quando necessários.</li>
+    </ul>
+
+    <p><strong>Representação Visual do Fluxograma BPMN:</strong></p>
+
+<div id="canvas" style="height: 1000px; width: 100%; border: 1px solid #ccc; background-color: #f8f9fa; border-radius: 8px; margin-top: 20px;"></div>
+<script src="https://unpkg.com/bpmn-js@17.11.1/dist/bpmn-viewer.production.min.js"></script>
+<script>
+  var bpmnXML = `<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1" name="Desejo de preparar o bolo."><bpmn:outgoing>Flow_1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:task id="Task_1" name="Separar a Receita do Bolo Caseiro"><bpmn:incoming>Flow_1</bpmn:incoming><bpmn:outgoing>Flow_2</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_1" name="Ingredientes na despensa?"><bpmn:incoming>Flow_2</bpmn:incoming><bpmn:outgoing>Flow_Sim1</bpmn:outgoing><bpmn:outgoing>Flow_Nao1</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Task_Mercado" name="Ir ao mercado e comprar"><bpmn:incoming>Flow_Nao1</bpmn:incoming><bpmn:outgoing>Flow_MercadoOut</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_Misturar" name="Misturar os ingredientes secos e líquidos"><bpmn:incoming>Flow_Sim1</bpmn:incoming><bpmn:incoming>Flow_MercadoOut</bpmn:incoming><bpmn:outgoing>Flow_3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_Despejar" name="Despejar a massa na forma untada"><bpmn:incoming>Flow_3</bpmn:incoming><bpmn:outgoing>Flow_4</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_Assar" name="Assar no forno a 180 C por 40 min"><bpmn:incoming>Flow_4</bpmn:incoming><bpmn:incoming>Flow_Loop</bpmn:incoming><bpmn:outgoing>Flow_5</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_2" name="Teste do palito saiu limpo?"><bpmn:incoming>Flow_5</bpmn:incoming><bpmn:outgoing>Flow_Sim2</bpmn:outgoing><bpmn:outgoing>Flow_Nao2</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Task_AssarMais" name="Assar por mais 5 minutos"><bpmn:incoming>Flow_Nao2</bpmn:incoming><bpmn:outgoing>Flow_Loop</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_Retirar" name="Retirar do forno e esfriar"><bpmn:incoming>Flow_Sim2</bpmn:incoming><bpmn:outgoing>Flow_6</bpmn:outgoing></bpmn:task>
+    <bpmn:endEvent id="EndEvent_1" name="Bolo pronto para consumo."><bpmn:incoming>Flow_6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_1" targetRef="Task_1" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_1" targetRef="Gateway_1" />
+    <bpmn:sequenceFlow id="Flow_Sim1" name="Sim" sourceRef="Gateway_1" targetRef="Task_Misturar" />
+    <bpmn:sequenceFlow id="Flow_Nao1" name="Não" sourceRef="Gateway_1" targetRef="Task_Mercado" />
+    <bpmn:sequenceFlow id="Flow_MercadoOut" sourceRef="Task_Mercado" targetRef="Task_Misturar" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_Misturar" targetRef="Task_Despejar" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_Despejar" targetRef="Task_Assar" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Task_Assar" targetRef="Gateway_2" />
+    <bpmn:sequenceFlow id="Flow_Sim2" name="Sim" sourceRef="Gateway_2" targetRef="Task_Retirar" />
+    <bpmn:sequenceFlow id="Flow_Nao2" name="Não" sourceRef="Gateway_2" targetRef="Task_AssarMais" />
+    <bpmn:sequenceFlow id="Flow_Loop" sourceRef="Task_AssarMais" targetRef="Task_Assar" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_Retirar" targetRef="EndEvent_1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1"><dc:Bounds x="282" y="100" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="330" y="105" width="80" height="27" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1_di" bpmnElement="Task_1"><dc:Bounds x="250" y="216" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1_di" bpmnElement="Gateway_1" isMarkerVisible="true"><dc:Bounds x="275" y="376" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="340" y="330" width="80" height="27" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Mercado_di" bpmnElement="Task_Mercado"><dc:Bounds x="420" y="361" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Misturar_di" bpmnElement="Task_Misturar"><dc:Bounds x="250" y="506" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Despejar_di" bpmnElement="Task_Despejar"><dc:Bounds x="250" y="666" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Assar_di" bpmnElement="Task_Assar"><dc:Bounds x="250" y="826" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_2_di" bpmnElement="Gateway_2" isMarkerVisible="true"><dc:Bounds x="275" y="986" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="340" y="940" width="80" height="27" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_AssarMais_di" bpmnElement="Task_AssarMais"><dc:Bounds x="420" y="971" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_Retirar_di" bpmnElement="Task_Retirar"><dc:Bounds x="250" y="1116" width="100" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1_di" bpmnElement="EndEvent_1"><dc:Bounds x="282" y="1276" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="261" y="1320" width="79" height="27" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1"><di:waypoint x="300" y="136" /><di:waypoint x="300" y="216" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2"><di:waypoint x="300" y="296" /><di:waypoint x="300" y="376" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Sim1_di" bpmnElement="Flow_Sim1"><di:waypoint x="275" y="401" /><di:waypoint x="160" y="401" /><di:waypoint x="160" y="506" /><di:waypoint x="300" y="506" /><bpmndi:BPMNLabel><dc:Bounds x="210" y="375" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Nao1_di" bpmnElement="Flow_Nao1"><di:waypoint x="325" y="401" /><di:waypoint x="420" y="401" /><bpmndi:BPMNLabel><dc:Bounds x="365" y="375" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_MercadoOut_di" bpmnElement="Flow_MercadoOut"><di:waypoint x="470" y="441" /><di:waypoint x="470" y="506" /><di:waypoint x="300" y="506" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3"><di:waypoint x="300" y="586" /><di:waypoint x="300" y="666" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4"><di:waypoint x="300" y="746" /><di:waypoint x="300" y="826" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5"><di:waypoint x="300" y="906" /><di:waypoint x="300" y="986" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Sim2_di" bpmnElement="Flow_Sim2"><di:waypoint x="275" y="1011" /><di:waypoint x="160" y="1011" /><di:waypoint x="160" y="1116" /><di:waypoint x="300" y="1116" /><bpmndi:BPMNLabel><dc:Bounds x="210" y="985" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Nao2_di" bpmnElement="Flow_Nao2"><di:waypoint x="325" y="1011" /><di:waypoint x="420" y="1011" /><bpmndi:BPMNLabel><dc:Bounds x="365" y="985" width="20" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Loop_di" bpmnElement="Flow_Loop"><di:waypoint x="470" y="971" /><di:waypoint x="470" y="866" /><di:waypoint x="350" y="866" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6"><di:waypoint x="300" y="1196" /><di:waypoint x="300" y="1276" /></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
+`;
+  var viewer = new BpmnJS({ container: '#canvas' });
+  viewer.importXML(bpmnXML).then(function() {
+    viewer.get('canvas').zoom('fit-viewport', 'auto');
+  }).catch(function(err) {
+    console.error('could not import BPMN 2.0 diagram', err);
+  });
+</script>
+
+
+</body>
+</html>
